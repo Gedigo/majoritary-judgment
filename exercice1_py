@@ -1,0 +1,113 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Gedigo/majoritary-judgment/blob/starter/exercice1_py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Sure, here is a Python program that asks the user to enter student grades. If the user enters a negative value, the program stops. On the other hand, for each note entered, the program gradually builds a list. After each entry of a new note (and therefore at each iteration of the loop), it displays the number of notes entered, the highest note, the lowest note, the average of all the notes."
+      ],
+      "metadata": {
+        "id": "yOmla_98b-Go"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Create an empty list to store the grades\n",
+        "grades = []\n",
+        "\n",
+        "# Get the user's input\n",
+        "while True:\n",
+        "  grade = int(input(\"Enter a grade: \"))\n",
+        "\n",
+        "  # If the user enters a negative value, stop the loop\n",
+        "  if grade < 0:\n",
+        "    break\n",
+        "\n",
+        "  # Add the grade to the list\n",
+        "  grades.append(grade)\n",
+        "\n",
+        "  # Print the number of grades entered, the highest grade, the lowest grade, and the average\n",
+        "  print(\"Number of grades entered:\", len(grades))\n",
+        "  print(\"Highest grade:\", max(grades))\n",
+        "  print(\"Lowest grade:\", min(grades))\n",
+        "  print(\"Average grade:\", sum(grades) / len(grades))"
+      ],
+      "outputs": [],
+      "execution_count": null,
+      "metadata": {
+        "id": "oQ62mR8lb-G8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Uis2fu_Bc2Am",
+        "outputId": "31a1198b-0442-43e5-c375-04ebc731d6e9"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mounted at /content/drive\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Here is an example of how the program might be used:\n",
+        "\n",
+        "```\n",
+        "Enter a grade: 90\n",
+        "Number of grades entered: 1\n",
+        "Highest grade: 90\n",
+        "Lowest grade: 90\n",
+        "Average grade: 90\n",
+        "\n",
+        "Enter a grade: 80\n",
+        "Number of grades entered: 2\n",
+        "Highest grade: 90\n",
+        "Lowest grade: 80\n",
+        "Average grade: 85\n",
+        "\n",
+        "Enter a grade: -1\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "MFKf1EIpb-HG"
+      }
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
